@@ -1,19 +1,15 @@
 #Scrape data from NFL Standings page for REG 2019 season
 
 import requests
+import urllib.request
 from bs4 import BeautifulSoup
 import pandas as pd
 import lxml
 
-
-
 url = 'https://www.nfl.com/standings/league/2019/REG'
-soup = BeautifulSoup(requests.get(url).text, 'lxml')
-
-table = soup.find('table')
-
-test = soup.table
-print(test)
+soup = BeautifulSoup(requests.get(url).text, 'lxml') #not sure why soup isn't returning tags in order
+print(soup)
+table = soup.table
 
 headers = []
 for th in table.select('th'):
