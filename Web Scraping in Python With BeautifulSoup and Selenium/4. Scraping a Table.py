@@ -1,4 +1,4 @@
-#Grabbing data from a table and converting it to a dataframe and outputting it to a CSV file
+#Grabbing data from world-population table -> df -> csv
 
 import requests
 from bs4 import BeautifulSoup

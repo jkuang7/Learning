@@ -1,4 +1,4 @@
-# Summary: We want to grab content from multiple pages but BeautifulSoup does not support clicking. We'll make requests for the next page by grabbing the href attribute from the next page btn instead
+# Grabbing data of posts from multiple pages -> df
 
 # Grab the roots from the galleryView
 # For each root
@@ -23,8 +23,8 @@ url = 'https://www.airbnb.ca/s/Las-Vegas--Nevada--United-States/homes?tab_id=hom
 soup = BeautifulSoup(requests.get(url).text, 'lxml') #the raw html from requests is not necessirally organized the way it would match on a webpage
 
 # if the web page is rendering data dynamically, we can write the raw html to a file, load it, stop the page for parsing reasons, and then query the data we need
-with open("output.html", "w") as file:
-    file.write(str(soup))
+# with open("output.html", "w") as file:
+#     file.write(str(soup))
 
 #tip: use break statements to test for single posts -> Build logic upwards
 
