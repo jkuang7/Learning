@@ -2,7 +2,6 @@
 #Note: soup is grabbing the tags in order of the original HTML response but the table is rendering dynamically based on the sort order of the table
 
 import requests
-import urllib.request
 from bs4 import BeautifulSoup
 import pandas as pd
 import lxml
