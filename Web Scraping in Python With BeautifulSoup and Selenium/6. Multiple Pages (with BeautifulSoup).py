@@ -1,6 +1,6 @@
 # Summary: We want to grab content from multiple pages but BeautifulSoup does not support clicking. We'll make requests for the next page by grabbing the href attribute from the next page btn instead
 
-# Grab all the roots from the galleryView
+# Grab the roots from the galleryView
 # For each root
   # try
     # Grab the information we need
