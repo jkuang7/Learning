@@ -1,4 +1,4 @@
-#Scrape data from NFL Standings page for REG 2019 season
+#Scrape data from NFL Standings page for REG 2019 season -> df
 
 import requests
 from bs4 import BeautifulSoup

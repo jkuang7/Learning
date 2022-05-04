@@ -1,4 +1,4 @@
-# Grabbing data of posts from multiple pages -> df
+# Grabbing data of airbnb posts (listings) from multiple pages -> df
 
 # Grab the roots from the galleryView
 # For each root
