@@ -14,9 +14,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
 
 #Setting up the ChromeDriver for Selenium
-options = webdriver.ChromeOptions()
+# options = webdriver.ChromeOptions()
+options = Options()
+options.add_experimental_option('detach', True)
 # options.add_experimental_option("detach", True) #disables the browser from being closed
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get("https://www.google.com")
@@ -33,3 +37,4 @@ print(search_box)
 #Finding elements by xpath
 box = driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
 box.send_keys('giraffe')
+box.send_keys(Keys.ENTER)
