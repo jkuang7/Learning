@@ -20,15 +20,12 @@ from selenium.webdriver.common.keys import Keys
 #Setting up the ChromeDriver for Selenium
 # options = webdriver.ChromeOptions()
 options = Options()
-options.add_experimental_option('detach', True)
+options.add_experimental_option('detach', True) #Keeps the chrome driver open after the script is finished
 # options.add_experimental_option("detach", True) #disables the browser from being closed
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get("https://www.google.com")
 
 print(driver.title) #prints the title of the page
-
-#Waiting Strategies are required if we need to render element before we can interact with it
-# driver.implicitly_wait(0.5)
 
 #Finding elements
 search_box = driver.find_element(By.CSS_SELECTOR, 'input').text
@@ -38,3 +35,26 @@ print(search_box)
 box = driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
 box.send_keys('giraffe')
 box.send_keys(Keys.ENTER)
+
+#Click on first link
+box = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div[1]/div/a/h3')
+box.click()
+
+#Save screenshot
+image = driver.find_element(By.XPATH, '//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[2]/td/a/img')
+image.screenshot('giraffe.png')
+
+
+#self scrolling
+# while True:
+#   driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+  
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+#Waiting Strategies are required if we need to render element before we can interact with it
+# driver.implicitly_wait(0.5)
+#time.sleep(0.5)
+element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[2]/td/a/img')))
+driver.find_element(By.XPATH, '//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[2]/td/a/img').click()
