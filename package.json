@@ -1,0 +1,19 @@
+{
+    "name": "learning",
+    "version": "1.0.0",
+    "description": "This is a sandbox for projects and algorithms to further develop skills I want to learn/master -- e.g. automation and web scraping, advanced javascript, react hooks, data structures, design patterns, and other languages/architectures of interest.",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jkuang7/Learning.git"
+    },
+    "author": "Jian Kuang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jkuang7/Learning/issues"
+    },
+    "homepage": "https://github.com/jkuang7/Learning#readme"
+}
