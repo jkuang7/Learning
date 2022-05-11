@@ -17,7 +17,6 @@ soup = BeautifulSoup(page.text, 'lxml')
 #Grab price
 price = soup.find('h2', class_ = 'intraday__price').find('bg-quote').text
 
-
 #Grab closing price
 closing_price = soup.find(class_ = 'u-semi').text
 
