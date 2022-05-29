@@ -1,4 +1,4 @@
-This is a sandbox for projects and algorithms to further develop skills I want to learn/master -- e.g. automation and web scraping, advanced javascript, react hooks, data structures, design patterns, and other languages/architectures of interest.
+This is a sandbox for projects to further develop skills I want to learn -- e.g. automation and web scraping, advanced javascript, react hooks, data structures, design patterns, etc.
 
 # Data Structures and Algorithms
 
